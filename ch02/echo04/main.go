@@ -9,6 +9,7 @@ import (
 
 // 是否忽略正常输出结尾的换行符
 var n = flag.Bool("n", false, "omit trailing newline")
+
 // 使用 sep 替换默认参数输出时使用的空格分隔符
 var sep = flag.String("s", " ", "separator")
 
@@ -18,4 +19,14 @@ func main() {
 	if !*n {
 		fmt.Println()
 	}
+
+	fmt.Println("%v", gcd(3, 9))
+}
+
+func gcd(x, y int) int {
+	for y != 0 {
+		x, y = y, x%y
+		fmt.Printf("%v %v\n", x, y)
+	}
+	return x
 }
