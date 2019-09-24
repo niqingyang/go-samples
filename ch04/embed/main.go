@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+type Point struct {
+	X, Y int
+}
+
+type Circle struct {
+	Point
+	Radius int
+}
+
+type Wheel struct {
+	Circle
+	Spokes int
+}
+
+var w Wheel
+
+func main() {
+	w = Wheel{Circle{Point{8, 8}, 5}, 20}
+	w = Wheel{
+		Circle: Circle{
+			Point: Point{X: 8, Y: 8},
+			Radius: 5,
+		},
+		Spokes: 20, // 注意：尾部的逗号是必需的（Radius 后面的逗号也一样）
+	}
+
+	fmt.Printf("%#v\n", w)
+
+	w.X = 42
+
+	fmt.Printf("%#v\n", w)
+}

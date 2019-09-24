@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-// go run main.go http://www.baidu.com http://weibo.com http://qq.com
+// go run point.go http://www.baidu.com http://weibo.com http://qq.com
 func main() {
 	start := time.Now()
 	// 加第二个参数后，通道就是非阻塞的

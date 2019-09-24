@@ -21,4 +21,5 @@ require (
 	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/tools v0.0.0-20190823170909-c4a336ef6a2f // indirect
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
+	gopl.io v0.0.0-20161206225729-b725d6015f98 // indirect
 )
